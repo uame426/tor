@@ -15,13 +15,13 @@ jobs:
     - name: Dependencies
       uses: daaku/gh-action-apt-install@v4
       with:
-        packages: libevent-dev asciidoc 
+        packages: libevent-dev 
     - uses: actions/checkout@v3
     - run: pwd
     - run: ls -la .
     - run: ./autogen.sh
     - name: configure
-      run: ./configure
+      run: ./configure --disable-asciidoc 
     - name: make
       run: make
       
