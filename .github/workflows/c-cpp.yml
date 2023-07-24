@@ -15,7 +15,7 @@ jobs:
     - name: Dependencies
       uses: daaku/gh-action-apt-install@v4
       with:
-        packages: libevent-dev
+        packages: libevent-dev asciidoc 
     - uses: actions/checkout@v3
     - run: pwd
     - run: ls -la .
