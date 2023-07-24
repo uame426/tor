@@ -12,7 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: apt-get install libevent-dev
+    - name: Dependencies
+      uses: daaku/gh-action-apt-install@v4
+      with:
+        packages: libevent-dev
     - uses: actions/checkout@v3
     - run: pwd
     - run: ls -la .
