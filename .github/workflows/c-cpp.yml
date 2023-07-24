@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - run: apt-get install libevent-dev
     - uses: actions/checkout@v3
     - run: pwd
     - run: ls -la .
